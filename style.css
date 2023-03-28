@@ -1,0 +1,168 @@
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+  
+:root{
+    /* Colors
+
+ Primary
+*/
+--Soft-blue: hsl(215, 48%, 68%);
+--Cyan: hsl(178, 100%, 50%);
+--Cya: hsl(178, 100%, 50%,0.5);
+
+
+/* Neutral
+*/
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: "outfit" ,sans-serif;
+
+}
+.container{
+    padding: 15px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.card{
+    max-width: 360px;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 25px;
+    border-radius: 10px;
+}
+.image{
+    width: 100%;
+    height: 300px;
+     cursor: pointer;
+     position: relative;
+}
+.image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cya);
+    border-radius: 10px;
+
+    opacity: 0;
+    
+    transition: opacity 0.5s ease;     
+}
+.image_overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.image:hover .image_overlay{
+    opacity: 1;
+
+}
+.card .image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+       
+}
+h2{
+    margin: 10px 0px;
+}
+.card>p{
+    font-size: 18px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.etherium{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 7px;
+    color: var(--Cyan);
+}
+
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 7px;
+
+}
+.time,.etherium{
+    display: flex;
+    justify-content: center;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color:var(--Soft-blue);
+    margin-bottom: 10px;
+}
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+
+}
+.profile .avatar{
+    width: 35px;
+    height:35px ;
+    border-radius: 50%;
+    padding: 1px;
+    border: 2px solid white;
+
+
+
+}
+.profile .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.profile p{
+    color: var(--Soft-blue);
+}
+.profile span{
+  
+    color: white;
+
+}
+.profile .name{
+    color: white;
+    cursor: pointer;
+}
+.profile:hover .name{
+    color: var(--Cyan);
+}
+
+
+
